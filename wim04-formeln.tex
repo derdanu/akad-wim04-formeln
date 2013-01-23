@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{scrartcl} 
+
+%\usepackage[latin1]{inputenc} 
+%Apple \usepackage[applemac]{inputenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+%Das Paket erzeugt ein anklickbares Verzeichnis in der PDF-Datei.
+\usepackage[hyperfootnotes=false,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+
+%Das Paket wird fr die anderthalb-zeiligen Zeilenabstand bentigt
+\usepackage{setspace}
+
+%Einrückung eines neuen Absatzes
+\setlength{\parindent}{0em}
+
+%Definition der Rnder
+\usepackage[paper=a4paper,left=30mm,right=30mm,top=30mm,bottom=30mm]{geometry} 
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{mathcomp}
+\usepackage{polynom}
+
+
+%Abstand der Fußnoten
+\deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
+
+%Regeln, bis zu welcher Tiefe (section,subsection,subsubsection) Überschriften angezeigt werden sollen (Anzeige der Überschriften im Verzeichnis / Anzeige der Nummerierung)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+%-------------------
+%Ende des Kopfbereiches
+%-------------------
+
+
+\begin{document}
+
+%Beginn der Titelseite
+\begin{titlepage}
+\begin{small}
+\vfill {AKAD\\ 
+Bachelor of Science (Wirtschaftsinformatik) \\ 
+Modulzusammenfassung}
+\end{small}
+
+
+\begin{center}
+\begin{Large}
+\vfill {\textsf{\textbf{
+WIM04 \\
+\vspace*{1cm} 
+Formelsammlung
+}}}
+\end{Large}
+\end{center}
+
+\begin{small}
+\vfill Daniel Falkner \\ Rotbach 529 \\  94078 Freyung \\  daniel.falkner@akad.de \\ 
+\today
+\end{small}
+
+\end{titlepage}
+%Ende der Titelseite
+
+
+%Inhaltsverzeichnis (aktualisiert sich erst nach dem zweiten Setzen)
+\tableofcontents
+\thispagestyle{empty}
+
+%Beginn einer neuen Seite
+\clearpage
+
+%Anderthalbzeiliger Zeilenabstand ab hier
+\onehalfspacing
+
+\pagestyle{plain}
+
+
+\section{Formeln}
+
+\end{document}
+
