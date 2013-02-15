@@ -24,7 +24,7 @@
 \usepackage{graphicx}
 \usepackage{mathcomp}
 \usepackage{polynom}
-
+\usepackage{hyperref}
 
 %Abstand der Fußnoten
 \deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
@@ -141,6 +141,49 @@ $s_n = a_1 * \cfrac{q^n - 1}{q - 1}, q \ne 1$
 \item Die Induktionsnahme + Ursprungsformel für n + 1 herleiten $a_{n+1}$
 \end{enumerate}
 \end{enumerate}
+
+\section{Matrizen}
+\subsection{Transponierte Matrix}
+$A^T$ entsteht durch Vertauschen der Zeilen mit den Spalten von $A$\\
+
+Beispiel: \\
+$A_{(2,3)} = 
+\begin{bmatrix}
+ 1 & 2 & 3\\
+ -2 & 4 & -1 \\
+\end{bmatrix}
+A_{(3,2)}^T = 
+\begin{bmatrix}
+ 1 & -2\\
+ 2 & 4\\
+ 3 & -1
+\end{bmatrix}
+$
+\subsection{Addition}
+\subsubsection{vom selben Typ}
+die gleichstehenden Elemente addieren und zu einer neuen Matrix zusammenfassen
+
+\subsection{Multiplikation}
+\subsubsection{mit einer reellen Zahl (Skalar)}
+alle Elemente der Matrix mit der Zahl multiplizeren
+
+\subsubsection{zweier Matrizen}
+Zwei Matrizen sind multiplikationsverträglich wenn die Spaltenanzahl von A mit der Zeilanzahl von B übereinstimmt. 
+Eine Hilfe bietet das Falk-Schema \footnote{\url{http://de.wikipedia.org/wiki/Falksches_Schema}}
+
+\subsubsection{spezielle Matrixprodukte}
+\begin{itemize}
+\item Zeilenvektor * Spaltenvektor = Skalar
+\item Spaltenvektor * Zeilenvekor = Matrix
+\end{itemize}
+
+\subsection{Inverse}
+A vom Typ (n,n) ist regulär, d.h. $A^{-1}$ (Inverse Matrix) existiert. Dann ist die Matrixgleichung A * X = B eindeutig lösbar.
+\subsubsection{Bestimmtung der inversen Matrix}
+\begin{itemize}
+\item Die Inverse $A^{-1}$ lässt sich mit dem Gauß-Jordan-Verfahren ermitteln \footnote{\url{http://de.wikipedia.org/wiki/Gau\%DF-Jordan-Algorithmus}}
+\item Eine quadratische Matrix A ist genau dann invertierbar, wenn ihre Determinate |A| ungleich Null ist
+\end{itemize}
 
 
 \end{document}
