@@ -228,7 +228,59 @@ Eine Hilfe bietet das Falk-Schema \footnote{\url{http://de.wikipedia.org/wiki/Fa
 \item adjungierte Matrix mit dem Kehrwert der Determinate multiplizieren. \\ $\cfrac{1}{D} * adj(A)$
 \end{enumerate}
 
+\section{Aussagenlogik}
+\subsection{Verknüpfungen}
 
+\subsubsection{Konjunktion (und)}
+\begin{tabular}{lc|c}
+  p & q & p $\land$ q\\
+  \hline
+  w & w & w \\
+  w & f & f \\
+  f & w & f \\
+  f & f & f \\
+\end{tabular}
+
+\subsubsection{Disjunktion (oder)}
+\begin{tabular}{lc|c}
+  p & q & p $\vee$ q\\
+  \hline
+  w & w & w \\
+  w & f & w \\
+  f & w & w \\
+  f & f & f \\
+\end{tabular}
+\\ 
+\\ Die Verknüpfung durch das ausschließende oder (XOR) heißt Alternative oder Antivalenz \\
+
+\begin{tabular}{lc|c}
+  p & q & p XOR q\\
+  \hline
+  w & w & f \\
+  w & f & w \\
+  f & w & w \\
+  f & f & f \\
+\end{tabular}
+
+\subsubsection{Subjunktion (wenn dann)}
+\begin{tabular}{lc|c}
+  p & q & p $\to$ q\\
+  \hline
+  w & w & w \\
+  w & f & f \\
+  f & w & w \\
+  f & f & w \\
+\end{tabular}
+
+\subsubsection{Bijunktion (genau dann, wenn)}
+\begin{tabular}{lc|c}
+  p & q & p $\leftrightarrow$ q\\
+  \hline
+  w & w & w \\
+  w & f & f \\
+  f & w & f \\
+  f & f & w \\
+\end{tabular}
 
 \end{document}
 
