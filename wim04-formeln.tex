@@ -142,6 +142,33 @@ $s_n = a_1 * \cfrac{q^n - 1}{q - 1}, q \ne 1$
 \end{enumerate}
 \end{enumerate}
 
+\section{Determinanten}
+\subsection{Regel von Sarrus}
+\subsubsection{Für 2 x 2}
+
+$
+\det(A) = 
+\det \begin{pmatrix}
+a & b \\ 
+c & d 
+\end{pmatrix} = ad - cb.
+$
+
+\subsubsection{Für 3 x 3}
+$ \det(A) = \det
+\begin{pmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+\end{pmatrix} = aei + bfg + cdh - ceg -afh -bdi
+$
+
+
+\subsection{CRAMER'sche Regel}
+
+\includegraphics{wim01-zusammenfassung_cramersche_regel.png}
+
+
 \section{Matrizen}
 \subsection{Transponierte Matrix}
 $A^T$ entsteht durch Vertauschen der Zeilen mit den Spalten von $A$\\
@@ -177,13 +204,27 @@ Eine Hilfe bietet das Falk-Schema \footnote{\url{http://de.wikipedia.org/wiki/Fa
 \item Spaltenvektor * Zeilenvekor = Matrix
 \end{itemize}
 
+
 \subsection{Inverse}
-A vom Typ (n,n) ist regulär, d.h. $A^{-1}$ (Inverse Matrix) existiert. Dann ist die Matrixgleichung A * X = B eindeutig lösbar.
-\subsubsection{Bestimmtung der inversen Matrix}
 \begin{itemize}
-\item Die Inverse $A^{-1}$ lässt sich mit dem Gauß-Jordan-Verfahren ermitteln \footnote{\url{http://de.wikipedia.org/wiki/Gau\%DF-Jordan-Algorithmus}}
+\item A vom Typ (n,n) ist regulär, d.h. $A^{-1}$ (Inverse Matrix) existiert. Dann ist die Matrixgleichung A * X = B eindeutig lösbar.
 \item Eine quadratische Matrix A ist genau dann invertierbar, wenn ihre Determinate |A| ungleich Null ist
 \end{itemize}
+
+\subsubsection{Bestimmung der inversen Matrix}
+\begin{itemize}
+\item Die Inverse $A^{-1}$ lässt sich mit dem Gauß-Jordan-Verfahren \footnote{\url{http://de.wikipedia.org/wiki/Gau\%DF-Jordan-Algorithmus}} ermitteln
+\end{itemize}
+
+\subsubsection{mit Hilfe der Adjunktion}
+\begin{enumerate}
+\item Determinante bestimmen und prüfen ob  $A^{-1}$ existiert
+\item Unterdeterminaten \footnote{\url{http://de.wikipedia.org/wiki/Minor_(Mathematik)}} bestimmen
+\item Kofaktorenmatrix cof(A) anhand der Unterdeterminanten aufstellen. Bei ungeraden Indizies das Vorzeichen ändern
+\item adjungierte Matrix aufstellen, indem die Kofaktorerenmatrix transponiert wird. \\ $adj(A) = [cof(A)]^T$
+\item adjungierte Matrix mit dem Kehrwert der Determinate multiplizieren. \\ $\cfrac{1}{D} * adj(A)$
+\end{enumerate}
+
 
 
 \end{document}
