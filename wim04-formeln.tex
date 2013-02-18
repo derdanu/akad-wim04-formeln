@@ -295,6 +295,23 @@ Eine Hilfe bietet das Falk-Schema \footnote{\url{http://de.wikipedia.org/wiki/Fa
 \\ $(p \to q) \land (q \to p)$ \textit{ist gleich mit} $p \leftrightarrow q$
 \\ $(p \land q) \vee (\neg p \land \neg q)$ \textit{ist gleich mit} $p \leftrightarrow q$
 
+
+\subsection{Gesetze}
+\begin{tabular}{l|c|l}
+  Verknüpfung $\land$ & Gesetze & Verknüpfung $\vee$\\
+  \hline
+  $p \land q \Leftrightarrow q \land p$ & Kommutativgesetz & $p \vee q \Leftrightarrow q \vee p$ \\
+  $(p \land q) \land r \Leftrightarrow p \land (q \land r)$ & Assoziativgesetz & $(p \vee q) \vee r \Leftrightarrow p \vee (q \vee r)$ \\
+  $p \land (q \vee r) \Leftrightarrow (p \land q) \vee (p \land r)$ & Distributivgesetz & $p \vee (q \land r) \Leftrightarrow (p \vee q) \land (p \vee r)$ \\
+  $p \land p \Leftrightarrow p$ & Idempotenzgesetz & $p \vee p \Leftrightarrow p$ \\
+  $p \land (p \vee q) \Leftrightarrow p$ & Absorptionsgesetz & $ p \vee (p \land q) \Leftrightarrow p$ \\  
+  $p \land (w) \Leftrightarrow p$ & Neutrales Element & $p \vee (f) \Leftrightarrow p$ \\
+   $p \land (f) \Leftrightarrow (f); p \land \neg p \Leftrightarrow (f)$ & Kontradiktion & \\
+  & Trautologie &  $p \vee (w) \Leftrightarrow (w); p \vee \neg p \Leftrightarrow (w)$ \\
+  $\neg (p \land q) \Leftrightarrow \neg p \vee \neg q$ & Regeln von de Morgen & $\neg (p \vee q) \Leftrightarrow \neg p \land \neg q$ \\
+\end{tabular}
+
+
 \subsection{Normalformen}
 
 \subsubsection{Minterme}
