@@ -301,11 +301,24 @@ Eine Hilfe bietet das Falk-Schema \footnote{\url{http://de.wikipedia.org/wiki/Fa
 Minterme sind genau diejenigen Konjunktionsterme, die den Wert 'w' nur einmal annehmen und mit dem Junktor $\land$ verknüpft sind.
 \subsubsection{Maxterme}
 Maxterme sind genau diejenigen Disjunktionsterme, die den Wert 'f' nur einmal annehmen und mit dem Junktor $\vee$ verknüpft sind.
-\subsubsection{Kanonische konjunktive Normalform}
-Ein Konjungat (Junktor $\land$) paarweiter verschiedener Maxterme heißt Kanonische konjunktive Normalform
 \subsubsection{Kanonische disjunktive Normalform}
-Ein Disjungat (Junktor $\vee$) paarweise verschiedener Minterme heißt Kanonische disjunktive Normalform
-
+Ein Disjungat (Junktor $\vee$) paarweise verschiedener Minterme heißt Kanonische disjunktive Normalform \\ \\
+\begin{tabular}{lcc|cc}
+  A & B & C & x & \\
+  \hline
+  w & w & w & f & \\
+  w & w & f & w & ergibt den Minterm $ A \land B \land \neg C$\\
+  ... & ... & ... & ...\
+\end{tabular}
+\subsubsection{Kanonische konjunktive Normalform}
+Ein Konjungat (Junktor $\land$) paarweiter verschiedener Maxterme heißt Kanonische konjunktive Normalform \\ \\
+\begin{tabular}{lcc|cc}
+  A & B & C & x & \\
+  \hline
+  w & w & w & f & ergibt den Maxterm $ \neg A \vee \neg B \vee \neg C$\\
+  w & w & f & w & \\
+  ... & ... & ... & ...\
+\end{tabular}
 
 \section{Schaltalgebra}
 \subsection{Gesetze}
@@ -323,6 +336,32 @@ Ein Disjungat (Junktor $\vee$) paarweise verschiedener Minterme heißt Kanonisch
    & Kontradiktion & $a * 0 = 0$ \\
   $a + a = a$ & Idempotenzgesetz & $a * a =a$ \\
   $\overline{a + b} = \overline{a} * \overline{b}$ & Regeln von de Morgen & $\overline{a * b} = \overline{a} + \overline{b}$ \\
+\end{tabular}
+
+\subsection{Normalformen}
+
+\subsubsection{Minterme}
+Minterme sind genau diejenigen vollständigen Produkte, die den Leitwert 1 genau dann annehmen, wenn jeder Faktor den Leitwert 1 annimmt.
+\subsubsection{Maxterme}
+Maxterme sind genau diejenigen vollständigen Summen, die den Leitwert 0 genau dann annehmen, wenn jeder Summand den Leitwert 0 annimmt.
+\subsubsection{Kanonische disjunktive Normalform}
+Die Summe der Minterme ergibt die Schaltfunktion in kanonischer disjunktiver Normalform \\ \\
+\begin{tabular}{lcc|cc}
+  a & b& c & f & \\
+  \hline
+  1 & 1 & 1 & 0 & \\
+  1 & 1 & 0 & 1 & ergibt den Minterm $a * b * \overline{c}$\\
+  ... & ... & ... & ...\
+\end{tabular}
+\subsubsection{Kanonische konjunktive Normalform}
+Das Produkt der Maxterme ergibt die Schaltfunktion in kanonischer konjunktiver Normalform
+ \\ \\
+\begin{tabular}{lcc|cc}
+  A & B & C & x & \\
+  \hline
+  1 & 1 & 1 & 0 & ergibt den Maxterm $\overline{a} + \overline{b} + \overline{c}$\\
+  1 & 1 & 0 & 1 & \\
+  ... & ... & ... & ...\
 \end{tabular}
 
 \end{document}
