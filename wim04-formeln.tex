@@ -147,13 +147,32 @@ Eine unendliche geometrische Reihe ($s_n$) mit $s_n = \sum\limits_{k=1}^n a_1 q^
 
 \newpage
 \section{Vollständige Induktion}
+Am Beispiel $ 2 + 4 + 6 ... 2 * n = n + n^2$
+
 \begin{enumerate}
 \item Zeigen das die Formeln für n = 1 gelten
+
+\begin{itemize}
+\item $s_1 = 2 * n = 2 * 1 = 2$
+\item $s_1 = n + n^2 = 1 + 1^2 = 2$
+\end{itemize}
+
 \item Zeigen das die Formeln für n + 1 gelten
 \begin{enumerate}
-\item Induktionsannahme festhalten $a_n$ (zu beweisende Formel)
-\item Die zubeweisende Formel für n + 1 herleiten $a_{n+1}$
-\item Die Induktionsnahme + Ursprungsformel für n + 1 herleiten $a_{n+1}$
+\item Induktionsannahme \textit{(zu beweisende Formel)} festhalten 
+\begin{itemize}
+\item $s_n = n + n^2$
+\end{itemize}
+
+\item Die zubeweisende Formel für $n + 1$ herleiten
+\begin{itemize}
+\item $s_{n+1} = (n+1) + (n+1)^2 = n^2 + 3n + 2$
+\end{itemize}
+
+\item Die Induktionsnahme + Ursprungsformel für $n + 1$ herleiten
+\begin{itemize}
+\item $s_{n+1} =  n + n^2 + 2 (n+1) = n^2 + 3n + 2$
+\end{itemize}
 \end{enumerate}
 \end{enumerate}
 
