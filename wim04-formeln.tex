@@ -25,6 +25,7 @@
 \usepackage{mathcomp}
 \usepackage{polynom}
 \usepackage{hyperref}
+\usepackage[nottoc]{tocbibind} % Anzeigen des Verzeichnisse im TOC
 
 %Abstand der Fußnoten
 \deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
@@ -32,6 +33,7 @@
 %Regeln, bis zu welcher Tiefe (section,subsection,subsubsection) Überschriften angezeigt werden sollen (Anzeige der Überschriften im Verzeichnis / Anzeige der Nummerierung)
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+\pagenumbering{roman}
 
 %-------------------
 %Ende des Kopfbereiches
@@ -70,16 +72,21 @@ Formelsammlung
 
 %Inhaltsverzeichnis (aktualisiert sich erst nach dem zweiten Setzen)
 \tableofcontents
-\thispagestyle{empty}
 
 %Beginn einer neuen Seite
 \clearpage
+
+% Abbildungsverzeichnis
+\listoffigures 
+\newpage
 
 %Anderthalbzeiliger Zeilenabstand ab hier
 \onehalfspacing
 
 \pagestyle{plain}
 
+
+\pagenumbering{arabic}
 
 \section{Folgen}
 Eine Serie von Zahlen oder Größen \\
@@ -203,7 +210,7 @@ $
 \begin{figure}[ht]
 	\centering
   \includegraphics[width=1.0\textwidth]{wim01-zusammenfassung_cramersche_regel.png}
-	\caption{AKAD WIM01 Mathematische Grundlagen, Lerneinheit 4, Seite 46}
+	\caption[CRAMER'sche Regel]{AKAD WIM01 Mathematische Grundlagen, Lerneinheit 4, Seite 46}
 	\label{fig01}
 \end{figure}
 
@@ -434,7 +441,7 @@ Das Produkt der Maxterme ergibt die Schaltfunktion in kanonischer konjunktiver N
 \begin{figure}[ht]
 	\centering
   \includegraphics[width=0.3\textwidth]{200px-Logic-gate-and-de.png}
-	\caption{Wikipedia \url{http://de.wikipedia.org/wiki/Logikgatter}}
+	\caption[UND Gatter]{UND Gatter \url{http://de.wikipedia.org/wiki/Logikgatter}}
 	\label{und}
 \end{figure}
 
@@ -442,7 +449,7 @@ Das Produkt der Maxterme ergibt die Schaltfunktion in kanonischer konjunktiver N
 \begin{figure}[ht]
 	\centering
   \includegraphics[width=0.3\textwidth]{Logic-gate-or-de.png}
-	\caption{Wikipedia \url{http://de.wikipedia.org/wiki/Logikgatter}}
+	\caption[ODER Gatter]{ODER Gatter \url{http://de.wikipedia.org/wiki/Logikgatter}}
 	\label{oder}
 \end{figure}
 
@@ -450,7 +457,7 @@ Das Produkt der Maxterme ergibt die Schaltfunktion in kanonischer konjunktiver N
 \begin{figure}[ht]
 	\centering
   \includegraphics[width=0.3\textwidth]{Logic-gate-inv-de.png}
-	\caption{Wikipedia \url{http://de.wikipedia.org/wiki/Logikgatter}}
+	\caption[NICHT Gatter]{NICHT Gatter \url{http://de.wikipedia.org/wiki/Logikgatter}}
 	\label{nicht}
 \end{figure}
 
